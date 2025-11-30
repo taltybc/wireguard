@@ -9,7 +9,7 @@
             "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
         },
         "InstanceType": {
-            "Default": "t3a.nano",
+            "Default": "t2.micro",
             "Description": "Instance type",
             "Type": "String"
         },
@@ -22,10 +22,6 @@
             "Default": "10.10.10.2/32",
             "Description": "The possible tunnel peers. One is the default",
             "Type": "String"
-        },
-        "VpnSecurityGroupID": {
-            "Description": "The VPC default Security GroupID",
-            "Type": "AWS::EC2::SecurityGroup::Id"
         }
     },
     "Mappings": {},
@@ -237,7 +233,7 @@
         "WireguardEIP": {
             "Type": "AWS::EC2::EIP",
             "Properties": {
-                "Domain" : "vpc",
+                "Domain" : "vpc"
             }
         },
         "WireguardVpnEipAsso": {
