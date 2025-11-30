@@ -22,6 +22,10 @@
             "Default": "10.10.10.2/32",
             "Description": "The possible tunnel peers. One is the default",
             "Type": "String"
+        },
+        "VpnSecurityGroupID": {
+            "Description": "The VPC default Security GroupID",
+            "Type": "AWS::EC2::SecurityGroup::Id"
         }
     },
     "Mappings": {},
